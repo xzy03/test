@@ -11,23 +11,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
     private final UserMapper userMapper;
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello World!";
-    }
-    @GetMapping("/findAll")
-    public List<User> findAllUser() {
-        return userMapper.queryAll();
-    }
-    @PostMapping("/insertRecord")
-    public String insertUser(@RequestBody User user) {
-        userMapper.insertRecord(user);
-        return "插入数据成功！";
-    }
 
-    @PostMapping("/updateRecord")
-    public String updateUser(@RequestBody User user) {
-        userMapper.updateRecordById(user);
-        return "更新数据成功！";
+    public String updateUser() {
+        return "fuck";
     }
 }
